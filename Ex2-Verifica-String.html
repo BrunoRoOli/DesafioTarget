@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Letra 'a'</title>
+</head>
+<body>
+    <h1>Verificador de Letra 'a'</h1>
+    <p>Digite um texto para verificar a ocorrência da letra 'a':</p>
+    <input type="text" id="texto">
+    <button onclick="verificarLetra()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarLetra() {
+            // o valor do input
+            var texto = document.getElementById('texto').value;
+            
+            // Converte o texto para minúsculas para a verificação
+            var textoMinusculo = texto.toLowerCase();
+            
+            // Conta as ocorrências da letra 'a'
+            var contagem = 0;
+            for (var i = 0; i < textoMinusculo.length; i++) {
+                if (textoMinusculo[i] === 'a') {
+                    contagem++;
+                }
+            }
+            
+            // Atualiza o resultado na página
+            var resultado = document.getElementById('resultado');
+            if (contagem > 0) {
+                resultado.innerHTML = `A letra 'a' aparece ${contagem} vez(es) no texto.`;
+            } else {
+                resultado.innerHTML = "A letra 'a' não aparece no texto.";
+            }
+        }
+    </script>
+</body>
+</html>
