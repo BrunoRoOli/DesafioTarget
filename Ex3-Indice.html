@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de SOMA</title>
+</head>
+<body>
+    <h1>Calcular SOMA</h1>
+    <button onclick="calcularSoma()">Calcular SOMA</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularSoma() {
+            let indice = 12;
+            let soma = 0;
+            let k = 1; 
+            
+            // O loop executa enquanto K for menor que indice 12
+            while (k < indice) {
+                k = k + 1; // k é incrementado em 1
+                soma = soma + k;
+            }
+
+            // Exibe o resultado na página
+            document.getElementById('resultado').innerText = `O valor de SOMA é ${soma}.`;
+        }
+    </script>
+</body>
+</html>
