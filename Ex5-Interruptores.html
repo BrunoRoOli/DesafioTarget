@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra Qual Interruptor Controla Qual Lâmpada</title>
+</head>
+<body>
+    <h1>Descubra Qual Interruptor Controla Qual Lâmpada</h1>
+    <p>Use a seguinte estratégia para descobrir qual interruptor controla qual lâmpada:</p>
+    <ol>
+        <li>Ligue o <strong>Interruptor 1</strong> e deixe-o ligado por 5-10 minutos.</li>
+        <li>Desligue o <strong>Interruptor 1</strong> e ligue o <strong>Interruptor 2</strong>.</li>
+        <li>Vá até a sala das lâmpadas.</li>
+    </ol>
+    <p>Com base na condição das lâmpadas, você pode identificar o seguinte:</p>
+    <ul>
+        <li>A lâmpada quente e apagada é controlada pelo <strong>Interruptor 1</strong>.</li>
+        <li>A lâmpada acesa é controlada pelo <strong>Interruptor 2</strong>.</li>
+        <li>A lâmpada fria e apagada é controlada pelo <strong>Interruptor 3</strong>.</li>
+    </ul>
+    <button onclick="exibirSolucao()">Exibir Solução</button>
+    <p id="solucao"></p>
+
+    <script>
+        function exibirSolucao() {
+            const solucao = `
+                1. Ligue o Interruptor 1 e deixe-o ligado por 5-10 minutos.
+                2. Desligue o Interruptor 1 e ligue o Interruptor 2.
+                3. Vá até a sala das lâmpadas.
+                4. Identifique as lâmpadas:
+                    - A lâmpada quente e apagada é controlada pelo Interruptor 1.
+                    - A lâmpada acesa é controlada pelo Interruptor 2.
+                    - A lâmpada fria e apagada é controlada pelo Interruptor 3.
+            `;
+            document.getElementById('solucao').innerText = solucao;
+        }
+    </script>
+</body>
+</html>
