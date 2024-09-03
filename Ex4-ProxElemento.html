@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o Próximo Elemento</title>
+</head>
+<body>
+    <h1>Descubra o Próximo Elemento das Sequências</h1>
+    <button onclick="calcularElementos()">Calcular Próximos Elementos</button>
+    <ul>
+        <li>Sequência a) 1, 3, 5, 7, ___ : <span id="resultado-a"></span></li>
+        <li>Sequência b) 2, 4, 8, 16, 32, 64, ____ : <span id="resultado-b"></span></li>
+        <li>Sequência c) 0, 1, 4, 9, 16, 25, 36, ____ : <span id="resultado-c"></span></li>
+        <li>Sequência d) 4, 16, 36, 64, ____ : <span id="resultado-d"></span></li>
+        <li>Sequência e) 1, 1, 2, 3, 5, 8, ____ : <span id="resultado-e"></span></li>
+        <li>Sequência f) 2, 10, 12, 16, 17, 18, 19, ____ : <span id="resultado-f"></span></li>
+    </ul>
+
+    <script>
+        function calcularElementos() {
+            // Sequência a
+            let proximoA = 7 + 2; // Incremento de 2 (números ímpares)
+            document.getElementById('resultado-a').innerText = proximoA;
+
+            // Sequência b
+            let proximoB = 64 * 2; // Dobrando o último número
+            document.getElementById('resultado-b').innerText = proximoB;
+
+            // Sequência c
+            let proximoC = 36 + 2 * 7 + 1; // Quadrado do próximo número natural (7 + 1)²
+            document.getElementById('resultado-c').innerText = proximoC;
+
+            // Sequência d
+            let proximoD = 64 + 2 * 8 + 4; // Quadrado do próximo número par (8 + 2)²
+            document.getElementById('resultado-d').innerText = proximoD;
+
+            // Sequência e
+            let a = 1, b = 1, c;
+            for (let i = 2; i < 6; i++) {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            document.getElementById('resultado-e').innerText = c;
+
+            // Sequência f
+            let proximoF = 19 + 1; // Próximo número na sequência, considerando números consecutivos
+            document.getElementById('resultado-f').innerText = proximoF;
+        }
+    </script>
+</body>
+</html>
